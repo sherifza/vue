@@ -8,12 +8,12 @@
 <script setup>
 import { defineEmits, ref } from 'vue';
 
-const emits = defineEmits(['addTask']);
+const emit = defineEmits(['addTask']);
 
 const newTask = ref('');
 
 const emitNewTask = () => {
-    emits('addTask', newTask.value);
+    emit('addTask', newTask.value);
     newTask.value = '';
 };
 </script>

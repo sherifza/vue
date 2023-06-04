@@ -1,10 +1,10 @@
 <template>
     <section v-show="filteredTasks.length && !hideMe">
-        <h2 > {{title}} ( {{ filteredTasks.length }} )<span @click="hideMe = true" v-show="toggleable">&times;</span></h2>
+        <h2 > {{title}} ( {{ filteredTasks.length }} )<span @click="hideMe=true" v-show="toggleable">&times;</span></h2>
             <FilterTags
                     :tags="tags"
                     :currentTag="currentTag"
-                    @tagChanged="($event)=>{currentTag=$event}"
+                    @tagChanged="(tag)=>{currentTag=tag}"
             >
             </FilterTags>
         <ul>
